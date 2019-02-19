@@ -1,0 +1,51 @@
+{
+  "name": "bem-react-classname",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "BEM class names generator created to use with React",
+  "scripts": {
+    "compile": "gulp --cwd . --gulpfile ./node_modules/library-utils/gulpfile.js compile",
+    "test": "jest",
+    "release-patch": "npm version patch -m 'chore(*): patch version'",
+    "release-minor": "npm version minor -m 'chore(*): minor version'",
+    "release-major": "npm version major -m 'chore(*): major version'",
+    "version": "git fetch --tags && npm run changelog && git add CHANGELOG.md",
+    "postversion": "git push origin master && git push --tags && npm run pub",
+    "pub": "npm run compile && cd .publish && npm publish",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/enzyme": "^3.1.18",
+    "@types/enzyme-adapter-react-16": "^1.0.4",
+    "@types/jest": "^24.0.6",
+    "@types/react": "16.8.2",
+    "babel-core": "^6.26.3",
+    "conventional-changelog-cli": "^2.0.12",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "jest": "^24.1.0",
+    "library-utils": "2.3.0",
+    "react": "16.8.2",
+    "react-dom": "^16.8.2",
+    "ts-jest": "^24.0.0"
+  },
+  "peerDependencies": {
+    "react": "16.*"
+  },
+  "author": "Good guys from Alfa Laboratory",
+  "maintainers": [
+    {
+      "email": "akitov@alfabank.ru",
+      "name": "Aleksandr Kitov"
+    }
+  ],
+  "jest": {
+    "preset": "ts-jest",
+    "testRegex": "src/.*-test\\.(tsx?)$",
+    "setupFiles": [
+      "<rootDir>/__tests__/setup.ts"
+    ]
+  }
+}

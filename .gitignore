@@ -1,0 +1,4 @@
+node_modules
+.publish
+.idea
+package-lock.json
