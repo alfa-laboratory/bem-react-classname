@@ -128,7 +128,7 @@ ReactDOM.render(
 
 Themes will also work with functional components:
 
-```
+```tsx
 import { createCn, createTheme } from 'bem-react-classname';
 
 enum Themes {
