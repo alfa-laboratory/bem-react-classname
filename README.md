@@ -35,7 +35,7 @@ ReactDOM.render(<Button className="myName">Click me!</Button>);
 ```
 
 It also works with functional components
-```
+```tsx
 import { createCn } from 'bem-react-classname';
 import React from 'react';
 
@@ -62,7 +62,7 @@ ReactDOM.render(<Button className="myName" size="s">Click me!</Button>);
 
 If you don't need to add external class name to functional component you can simplify it:
 
-```
+```tsx
 import { createCn } from 'bem-react-classname';
 import React from 'react';
 
@@ -91,7 +91,7 @@ import { createCn, createTheme } from 'bem-react-classname';
 
 enum Themes {
     dark = 'dark',
-    light = 'light
+    light = 'light'
 }
 
 const { ThemeProvider, withTheme } = createTheme(Themes.dark);
@@ -133,7 +133,7 @@ import { createCn, createTheme } from 'bem-react-classname';
 
 enum Themes {
     dark = 'dark',
-    light = 'light
+    light = 'light'
 }
 
 const { ThemeProvider, withTheme } = createTheme(Themes.dark);
