@@ -11,7 +11,7 @@
         "experimentalDecorators": true,
         "skipLibCheck": true,
         "jsx": "react",
-        "target": "es2017",
+        "target": "es5",
         "module": "commonjs",
         "moduleResolution": "node",
         "strict": true
