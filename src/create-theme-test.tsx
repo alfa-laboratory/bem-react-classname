@@ -36,3 +36,15 @@ test('should allow to override theme when it was passed directly as props to com
 
     expect(FakeComponent).toHaveBeenCalledWith({ theme: 'blue' }, expect.anything());
 });
+
+test('should add default theme to component without passed theme and without context', () => {
+    const { withTheme } = createTheme('theme');
+    const FakeComponent = jest.fn().mockReturnValue(null);
+    const TestComponent = withTheme(FakeComponent);
+
+    mount(
+        <TestComponent />
+    );
+
+    expect(FakeComponent).toHaveBeenCalledWith({ theme: 'theme' }, expect.anything());
+});
