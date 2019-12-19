@@ -37,14 +37,22 @@ test('should allow to override theme when it was passed directly as props to com
     expect(FakeComponent).toHaveBeenCalledWith({ theme: 'blue' }, expect.anything());
 });
 
-test('should add default theme to component without passed theme and without context', () => {
-    const { withTheme } = createTheme('theme');
-    const FakeComponent = jest.fn().mockReturnValue(null);
-    const TestComponent = withTheme(FakeComponent);
-
+test('should forward ref to wrapped component', () => {
+    class Component extends React.Component {
+        render() {
+          return <div {...this.props} />;
+        }
+    }
+    
+    const { ThemeProvider, withTheme } = createTheme('theme');
+    const CompWithTheme = withTheme(Component);
+    const ref = React.createRef();
+  
     mount(
-        <TestComponent />
+        <ThemeProvider value='yellow'>
+            <CompWithTheme ref={ref} />
+        </ThemeProvider>
     );
-
-    expect(FakeComponent).toHaveBeenCalledWith({ theme: 'theme' }, expect.anything());
+  
+    expect(ref.current).toBeInstanceOf(Component);
 });

@@ -4,7 +4,7 @@ export function createTheme<T>(defaultTheme: T) {
     const ThemeContext = React.createContext<T>(defaultTheme);
 
     function withTheme<P extends { theme?: T }>(
-        Component: React.ComponentClass<P>
+        Component: React.ComponentClass<P>, defaultTheme?: T
     ) {
         const ForwardRef: React.RefForwardingComponent<React.Component<P>, P> = (props, ref) => {
             return (
