@@ -9,7 +9,7 @@ export function createTheme<T>(defaultTheme: T) {
         const ForwardRef: React.RefForwardingComponent<React.Component<P>, P> = (props, ref) => {
             return (
                 <ThemeContext.Consumer>
-                    { state => <Component theme={ state || defaultTheme } ref={ ref } { ...props } /> }
+                    { state => <Component theme={ state || defaultTheme } { ...props } ref={ ref }  /> }
                 </ThemeContext.Consumer>
             );
         };
