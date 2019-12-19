@@ -38,21 +38,21 @@ test('should allow to override theme when it was passed directly as props to com
 });
 
 test('should forward ref to wrapped component', () => {
-    class Component extends React.Component {
+    class Component extends React.Component<{ theme?: string }> {
         render() {
           return <div {...this.props} />;
         }
     }
-    
+
     const { ThemeProvider, withTheme } = createTheme('theme');
     const CompWithTheme = withTheme(Component);
     const ref = React.createRef();
-  
+
     mount(
         <ThemeProvider value='yellow'>
             <CompWithTheme ref={ref} />
         </ThemeProvider>
     );
-  
+
     expect(ref.current).toBeInstanceOf(Component);
 });
