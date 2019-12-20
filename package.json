@@ -34,6 +34,9 @@
   "peerDependencies": {
     "react": "16.*"
   },
+  "resolutions": {
+    "set-value": ">=2.0.1"
+  },
   "author": "Good guys from Alfa Laboratory",
   "maintainers": [
     {
