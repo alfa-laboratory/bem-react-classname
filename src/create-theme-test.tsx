@@ -23,6 +23,20 @@ test('should pass theme prop from Context to wrapped component', () => {
     expect(FakeComponent).toHaveBeenCalledWith({ theme: 'yellow' }, expect.anything());
 });
 
+test('should use theme provider theme when passed theme prop with undefined value', () => {
+    const { ThemeProvider, withTheme } = createTheme('theme');
+    const FakeComponent = jest.fn().mockReturnValue(null);
+    const TestComponent = withTheme(FakeComponent);
+
+    mount(
+        <ThemeProvider value='yellow'>
+            <TestComponent theme={undefined} />
+        </ThemeProvider>
+    );
+
+    expect(FakeComponent).toHaveBeenCalledWith({ theme: 'yellow' }, expect.anything());
+});
+
 test('should allow to override theme when it was passed directly as props to component', () => {
     const { ThemeProvider, withTheme } = createTheme('theme');
     const FakeComponent = jest.fn().mockReturnValue(null);
