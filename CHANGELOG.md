@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/alfa-laboratory/bem-react-classname/compare/v1.1.0...v1.1.1) (2020-02-18)
+
+
+### Features
+
+* allow mumber modifiers ([7659390](https://github.com/alfa-laboratory/bem-react-classname/commit/7659390))
+
+
+
 # [1.1.0](https://github.com/alfa-laboratory/bem-react-classname/compare/v1.0.1...v1.1.0) (2019-12-20)
 
 
