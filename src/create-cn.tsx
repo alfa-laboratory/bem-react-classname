@@ -1,4 +1,4 @@
-type CnModifierMap = { [key: string]: boolean | string };
+type CnModifierMap = { [key: string]: boolean | string | number };
 
 export function createCn(blockName: string, className?: string, theme?: string) {
     return function (
@@ -49,7 +49,7 @@ function createModifiersString(blockName: string, elemOrMode: CnModifierMap) {
         .reduce((prev, curr) => {
             const value = elemOrMode[curr];
 
-            if (typeof value === 'string') {
+            if (typeof value === 'string' || typeof value === 'number') {
                 return `${prev} ${blockName}_${curr}_${value}`;
             }
             if (value) {
