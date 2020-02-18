@@ -96,6 +96,6 @@ test('should add string modifier to block className', () => {
 test('should add modifier to element className', () => {
     const cn = createCn('block');
 
-    const className = cn('element', { mod1: true, mod2: false, mod3: 'value' });
-    expect(className).toBe('block__element block__element_mod1 block__element_mod3_value');
+    const className = cn('element', { mod1: true, mod2: false, mod3: 'value', mod4: 4 });
+    expect(className).toBe('block__element block__element_mod1 block__element_mod3_value block__element_mod4_4');
 });
