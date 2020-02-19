@@ -1,3 +1,12 @@
+## [1.1.4](https://github.com/alfa-laboratory/bem-react-classname/compare/v1.1.3...v1.1.4) (2020-02-19)
+
+
+### Bug Fixes
+
+* use provider state when passed undefined theme prop ([139236e](https://github.com/alfa-laboratory/bem-react-classname/commit/139236e))
+
+
+
 ## [1.1.3](https://github.com/alfa-laboratory/bem-react-classname/compare/v1.1.2...v1.1.3) (2020-02-18)
 
 
