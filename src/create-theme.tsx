@@ -6,10 +6,10 @@ export function createTheme<T>(defaultTheme: T) {
     function withTheme<P extends { theme?: T }>(
         Component: React.ComponentType<P>
     ): React.ComponentType<P & React.RefAttributes<any>> {
-        const ForwardRef: React.RefForwardingComponent<React.Component<P>, P> = (props, ref) => {
+        const ForwardRef: React.RefForwardingComponent<React.Component<P>, P> = ({ theme, ...props }, ref) => {
             return (
                 <ThemeContext.Consumer>
-                    { state => <Component theme={ state || defaultTheme } { ...props } ref={ ref }  /> }
+                    { state => <Component theme={ theme || state || defaultTheme } { ...props as any } ref={ ref }  /> }
                 </ThemeContext.Consumer>
             );
         };
