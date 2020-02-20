@@ -1,6 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { createTheme } from './create-theme';
+import ThemedComponent from './themed-component-example-for-test';
 
 test('should return ThemeProvider and withTheme HOC', () => {
     const { ThemeProvider, withTheme } = createTheme('any string');
@@ -69,4 +70,9 @@ test('should forward ref to wrapped component', () => {
     );
 
     expect(ref.current).toBeInstanceOf(Component);
+});
+
+test('should allow use wrapped component as type', () => {
+    // TODO: fix
+    let component: ThemedComponent;
 });
