@@ -60,7 +60,7 @@ test('should forward ref to wrapped component', () => {
 
     const { ThemeProvider, withTheme } = createTheme('theme');
     const CompWithTheme = withTheme(Component);
-    const ref = React.createRef();
+    const ref = React.createRef<Component>();
 
     mount(
         <ThemeProvider value='yellow'>
