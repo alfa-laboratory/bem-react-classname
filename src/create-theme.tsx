@@ -5,17 +5,26 @@ export function createTheme<T>(defaultTheme: T) {
 
     function withTheme<P extends { theme?: T }>(
         Component: React.ComponentType<P>
-    ): React.ComponentType<P & React.RefAttributes<any>> {
-        const ForwardRef: React.RefForwardingComponent<React.Component<P>, P> = ({ theme, ...props }, ref) => {
+    ): React.ForwardRefExoticComponent<React.PropsWithoutRef<P> & React.RefAttributes<React.Component<P>>> {
+        const ForwardRef: React.RefForwardingComponent<React.Component<P>, P> = ({ ...props }, ref) => {
             return (
                 <ThemeContext.Consumer>
-                    { state => <Component theme={ theme || state || defaultTheme } { ...props as any } ref={ ref }  /> }
+                    { (state) => {
+                        const propsWithTheme = {
+                            ...props,
+                            theme: props.theme || state || defaultTheme
+                        };
+
+                        return (
+                            <Component { ...propsWithTheme } ref={ ref } />
+                        );
+                    } }
                 </ThemeContext.Consumer>
             );
         };
         ForwardRef.displayName =`ThemedComponent(${Component.displayName || Component.name})`;
 
-        return React.forwardRef(ForwardRef) as any;
+        return React.forwardRef(ForwardRef);
     }
 
     return {
