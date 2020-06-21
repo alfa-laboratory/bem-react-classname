@@ -22,6 +22,5 @@ jobs:
         yarn install --frozen-lockfile
         yarn compile
         yarn test
-        yarn audit
       env:
         CI: true
