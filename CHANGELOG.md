@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/alfa-laboratory/bem-react-classname/compare/v1.1.4...v1.2.0) (2020-06-23)
+
+
+### Bug Fixes
+
+* **createTheme.tsx:** removed all `any` from types ([5dac49c](https://github.com/alfa-laboratory/bem-react-classname/commit/5dac49c))
+
+
+
 ## [1.1.4](https://github.com/alfa-laboratory/bem-react-classname/compare/v1.1.3...v1.1.4) (2020-02-19)
 
 
