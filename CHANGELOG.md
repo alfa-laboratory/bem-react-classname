@@ -1,3 +1,7 @@
+## [1.2.1](https://github.com/alfa-laboratory/bem-react-classname/compare/v1.2.0...v1.2.1) (2020-06-25)
+
+
+
 # [1.2.0](https://github.com/alfa-laboratory/bem-react-classname/compare/v1.1.4...v1.2.0) (2020-06-23)
 
 
