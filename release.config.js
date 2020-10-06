@@ -7,6 +7,10 @@ module.exports = {
             '@semantic-release/npm',
             { pkgRoot: './.publish' }
         ],
+        [
+            '@semantic-release/npm',
+            { npmPublish: false }
+        ],
         '@semantic-release/git',
         '@semantic-release/github',
     ],
