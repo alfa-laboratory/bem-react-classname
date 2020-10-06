@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/alfa-laboratory/bem-react-classname/compare/v1.3.0...v1.3.1) (2020-10-06)
+
+
+### Bug Fixes
+
+* adds fix ([25bef08](https://github.com/alfa-laboratory/bem-react-classname/commit/25bef08ffeb3ebf882902e0a758d9ad59c64783a))
+
 ## [1.2.1](https://github.com/alfa-laboratory/bem-react-classname/compare/v1.2.0...v1.2.1) (2020-06-25)
 
 
@@ -56,6 +63,3 @@
 ### Bug Fixes
 
 * compile to es5 ([f4ba0e3](https://github.com/alfa-laboratory/bem-react-classname/commit/f4ba0e3))
-
-
-
