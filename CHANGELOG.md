@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/alfa-laboratory/bem-react-classname/compare/v1.3.1...v1.3.2) (2020-10-06)
+
+
+### Bug Fixes
+
+* adds fix for package.json version ([7389d47](https://github.com/alfa-laboratory/bem-react-classname/commit/7389d47c7ad66bd302b687cf9325a21b577b72d3))
+
 ## [1.3.1](https://github.com/alfa-laboratory/bem-react-classname/compare/v1.3.0...v1.3.1) (2020-10-06)
 
 
